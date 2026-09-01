@@ -299,7 +299,7 @@ function productCard(product) {
         <article class="product-card reveal">
             <div class="product-media">
                 <a href="product.html?id=${product.id}" aria-label="View ${product.name}">
-                    <img src="assets/images/${product.image}" alt="${product.name}">
+                    <img src="./${product.image}" alt="${product.name}">
                 </a>
                 ${product.old ? `<span class="sale-tag">-${Math.round((1 - product.price / product.old) * 100)}%</span>` : ""}
                 <div class="product-tools">
@@ -359,7 +359,7 @@ function renderCart() {
     if (!cart.length) { target.innerHTML = `<div class="empty"><h3>Your bag is waiting for something beautiful.</h3><p>Explore the latest MIZA edit and find your next piece.</p><a class="btn" href="shop.html" style="margin-top:18px;">Continue Shopping</a></div>`; document.querySelector("#cartSummary")?.replaceChildren(); return; }
     target.innerHTML = cart.map(item => { const p = productById(item.id); return `
         <div class="info-card" style="display:grid;grid-template-columns:110px 1fr auto;gap:18px;align-items:center;margin-bottom:12px;">
-            <img src="assets/images/${p.image}" alt="${p.name}" style="width:110px;height:130px;object-fit:cover;">
+            <img src="./${p.image}" alt="${p.name}" style="width:110px;height:130px;object-fit:cover;">
             <div><a href="product.html?id=${p.id}"><h3>${p.name}</h3></a><p>${p.category}</p><div class="price">${money(p.price)}</div>
             <div class="qty" style="margin-top:10px;"><button onclick="changeQuantity('${p.id}',-1)" aria-label="Decrease quantity">−</button><span>${item.quantity}</span><button onclick="changeQuantity('${p.id}',1)" aria-label="Increase quantity">+</button></div></div>
             <button class="icon-btn" onclick="removeFromCart('${p.id}')" aria-label="Remove item">×</button></div>`; }).join("");
@@ -380,10 +380,10 @@ function renderProductDetail() {
     target.innerHTML = `
         <div class="detail">
             <div class="gallery reveal">
-                <img id="mainProductImage" src="assets/images/${p.image}" alt="${p.name}">
-                <img src="assets/images/${p.image}" alt="${p.name} alternate view">
-                <img src="assets/images/editorial.svg" alt="MIZA editorial detail">
-                <img src="assets/images/${p.image}" alt="${p.name} styling view">
+                <img id="mainProductImage" src="./${p.image}" alt="${p.name}">
+                <img src="./${p.image}" alt="${p.name} alternate view">
+                <img src="./editorial.svg" alt="MIZA editorial detail">
+                <img src="./${p.image}" alt="${p.name} styling view">
             </div>
             <div class="detail-copy reveal">
                 <span class="eyebrow">${p.category}</span>
@@ -439,12 +439,12 @@ function selectColor(button, color, productId) {
     ];
     const extensions = [".jfif", ".jpg", ".jpeg", ".png", ".webp"];
     const paths = [];
-    candidates.forEach(name => extensions.forEach(ext => paths.push(`assets/images/${name}${ext}`)));
+    candidates.forEach(name => extensions.forEach(ext => paths.push(`./${name}${ext}`)));
 
     let index = 0;
     const tryNext = () => {
         if (index >= paths.length) {
-            mainImage.src = `assets/images/${product.image}`;
+            mainImage.src = `./${product.image}`;
             return;
         }
         const test = new Image();
