@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ead9cf"/><stop offset=".5" stop-color="#cdd5bd"/><stop offset="1" stop-color="#f3b9a7"/></linearGradient></defs>
+<rect width="900" height="1100" fill="#f3eee8"/><circle cx="690" cy="210" r="180" fill="#dce2d0"/>
+<path d="M270 1020C300 800 305 610 355 410L425 330L475 330L545 410C595 610 600 800 630 1020Z" fill="url(#g)"/>
+<path d="M355 410L270 600L345 650L400 510M545 410L630 600L555 650L500 510" fill="#c7cdb8"/>
+<path d="M425 330V210M475 330V210" stroke="#40533b" stroke-width="13"/>
+<path d="M450 180C430 160 432 120 450 105C468 120 470 160 450 180Z" fill="#40533b"/>
+<path d="M450 180C350 170 330 240 300 300M450 180C550 170 570 240 600 300" fill="none" stroke="#40533b" stroke-width="10"/>
+<path d="M130 900C260 760 220 590 130 470C60 380 85 260 210 190" fill="none" stroke="#40533b" stroke-width="8"/>
+<path d="M125 520C180 490 215 455 230 400M135 650C205 630 245 595 260 540" fill="none" stroke="#718566" stroke-width="18" stroke-linecap="round"/>
+<path d="M220 400C170 360 155 310 165 260C215 300 230 350 220 400ZM260 540C310 490 340 455 345 410C295 425 265 475 260 540Z" fill="#9eab8f"/>
+<circle cx="215" cy="260" r="14" fill="#f0ad98"/><circle cx="245" cy="300" r="10" fill="#f4c1ae"/>
+<path d="M620 610C700 550 770 535 825 575" fill="none" stroke="#e9a894" stroke-width="10"/>
+<path d="M650 610C715 590 770 620 805 680" fill="none" stroke="#e9a894" stroke-width="7"/>
+</svg>
